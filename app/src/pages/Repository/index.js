@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from './styles';
+import WebView from 'react-native-webview';
 
 export default function Repository({ navigation }) {
   const repository = navigation.getParam('repository');
 
-  return <Container source={{ uri: repository.html_url }} />;
+  return <WebView source={{ uri: repository.html_url }} flex="1" />;
 }
 
 Repository.propTypes = {
